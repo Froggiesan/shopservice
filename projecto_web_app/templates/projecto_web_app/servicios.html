@@ -3,7 +3,27 @@
 <head>
     
     <title>Services</title>
+    <style>
+        div p{
+            color: white;
+            text-align: center;
 
+        }
+        div h2{
+            color: white;
+            text-align: center;
+            text-decoration: underline;
+            font-size: 3rem;
+
+        }
+        div img{
+            width: 35vw;
+            height: 45vh;
+            display:block;
+            margin:auto;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -12,13 +32,20 @@
 
     {% load static %}
     {% block content %}
-   <!-- Heading -->
    
+        {% for servicio in servicios %}
 
+    <div>
+        <p>
+            <h2>{{servicio.titulo}}</h2>
+            <p>{{servicio.contenido}}</p>
+            <p><img src="{{servicio.imagen.url}}" alt=""></p>
+        </p>
+    </div>
         
-    <!-- Message -->
     
-
+    
+        {% endfor %}
     {% endblock %}
     
 
