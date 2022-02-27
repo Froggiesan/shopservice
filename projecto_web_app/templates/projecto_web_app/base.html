@@ -13,6 +13,7 @@
      <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
      
 
+  
     <!-- Styles -->
     <link href="{% static 'projecto_web_app/css/gestion.css' %}" rel="stylesheet">
 </head>
@@ -21,7 +22,7 @@
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
       
-        <span class="site-heading-lower">Gestión de Pedidos</span>
+        <span class="site-heading-lower">Leather gallery</span>
       </h1>
 
 
@@ -35,18 +36,18 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item {% if request.path == '/' %}active{% endif %}  px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Home</a>
           </li>
-          <li class="nav-item {% if request.path == '/servicios' %}active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
+          <li class="nav-item {% if request.path|slice:':10' == '/servicios' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Services</a>
           </li>
-          <li class="nav-item {% if request.path == '/tienda' %}active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
+          <li class="nav-item {% if request.path|slice:':7' == '/tienda' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Shop</a>
           </li>
-          <li class="nav-item {% if request.path == '/contacto' %}active{% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto'%}">Contacto</a>
+          <li class="nav-item {% if request.path|slice:':9' == '/contacto' %}active{% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto'%}">Contact us</a>
           </li>
-          <li class="nav-item {% if request.path == '/blog' %}active{% endif %} px-lg-4">
+          <li class="nav-item {% if request.path|slice:':6' == '/blog/' %}active{% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
           </li>
          
@@ -87,11 +88,11 @@
 	        </a>
 	    </p>
         <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
+        	<a href="sample.html" class="link">Privacy Policy</a> ·
+        	<a href="sample.html" class="link">Legal warning</a> ·
         	<a href="sample.html" class="link">Cookies</a>
 		</p>
-        <p class="m-0 mbt1">&copy; Gestión de Pedidos 2022</p>
+        <p class="m-0 mbt1">&copy; Order Management 2022</p>
       </div>
 	</footer>
 

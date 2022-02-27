@@ -22,5 +22,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     path('',include('projecto_web_app.urls')),
+    path('servicios/', include('servicios.urls')),
+    path('blog/', include('blog.urls')),
+    path('blog/', include('contacto.urls')),
+
+
+
     
 ]

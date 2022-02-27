@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>Blog</title>
+    <style>
+
+        
+        .mini{
+            font-size: 0.3rem;
+            text-align: left;
+            
+        }
+    </style>
+</head>
+
+<body>
+    {% extends "projecto_web_app/base.html" %}
+
+
+    {% load static %}
+    {% block content %}
+   <!-- Heading -->
+   
+   
+        {% for post in posts %}
+
+            <section class="page-section clearfix">
+                <div class="container">
+                    <div class="intro">
+                    <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.imagen.url}} "alt="" style="width: 40vw;height: 45vh;">
+                    <div class="intro-text left-0 text-center bg-faded p-5 rounded box">
+                        <h2 class="section-heading mb-4" >
+                        <span class="section-heading-lower">{{post.titulo}}</span>
+                        <span class="section-heading-upper">{{post.contenido}}</span>
+                        <span style="font-size: 0.5rem;" class="section-heading-lower mini">Autor: <strong style="text-decoration: underline white;">{{post.autor}}</strong></span>
+
+                        </h2>
+                        </p>
+                        
+                    </div>
+                    </div>
+                </div>
+                </section>
+
+
+                
+
+
+        {% endfor %}
+        
+        <section>
+            <div style="width: 75vw; margin: auto;color: white;align-content: center;
+            text-align: center;">
+                
+                Categorias:
+                {% for post in posts %}
+
+                    {% for categoria in post.categorias.all %}
+
+                        {{categoria.nombre}}|
+                    {% endfor %}
+
+                {% endfor %}
+
+
+
+            </div>
+        </section>
+        
+  
+    <!-- Message -->
+    
+
+    {% endblock %}
+    
+
+</body>
+
+
+</html>

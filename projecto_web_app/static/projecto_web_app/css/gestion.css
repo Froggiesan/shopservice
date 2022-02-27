@@ -80,7 +80,7 @@ p {
 }
 
 #mainNav {
-  background-color: rgb(102, 124, 20);
+  background-color: rgb(24, 64, 8);
   font-family: 'Raleway';
 }
 
@@ -111,6 +111,12 @@ p {
     text-decoration: underline;
   }
 }
+.box{
+  left: 30vw;
+}
+.mini{
+  font-size: 0.5.rem;
+}
 
 .btn-xl {
   font-weight: 700;
@@ -134,7 +140,7 @@ p {
     left: 600;
     width: 60%;
     margin-top: 3rem;
-    background-color: rgb(102, 124, 20);
+    background-color: rgb(24, 64, 8, 0.95);
     color: cornsilk;
     position: absolute;
   }
@@ -155,14 +161,14 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgb(242, 245, 240);
+  
 }
 
 .cta .cta-inner {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgb(102, 124, 20);
+  background-color: rgb(24, 64, 8, 0.95);
   color: cornsilk;
 }
 
@@ -174,7 +180,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+ 
 }
 
 .cta .cta-innerv {
