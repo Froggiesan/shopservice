@@ -24,7 +24,7 @@ urlpatterns = [
     path('',include('projecto_web_app.urls')),
     path('servicios/', include('servicios.urls')),
     path('blog/', include('blog.urls')),
-    path('blog/', include('contacto.urls')),
+    path('contacto/', include('contacto.urls')),
 
 
 

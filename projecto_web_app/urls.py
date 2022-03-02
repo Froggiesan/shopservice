@@ -1,4 +1,5 @@
 from django.urls import path
+
 from projecto_web_app import views
 from django.contrib import admin
 from unicodedata import name
@@ -9,6 +10,7 @@ urlpatterns = [
     
     path('',views.home, name='Home'),
     path('tienda',views.tienda, name='Tienda'),
+    
     
     
 

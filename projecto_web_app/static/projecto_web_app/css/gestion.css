@@ -283,3 +283,18 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+.container-formulario{
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  background-color: rgb(24, 64, 8, 0.9);
+  border-radius: 5px;
+  width: 35vw;
+  margin: 5vh auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  
+
+}

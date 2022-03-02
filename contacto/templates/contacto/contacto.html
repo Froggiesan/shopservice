@@ -3,7 +3,7 @@
 <head>
     <title>Contact</title>
     <style>
-
+        
 
         
     </style>
@@ -16,14 +16,36 @@
     {% load static %}
     {% block content %}
 
+        <div class="container-formulario">
 
-        <p style="color: white;">{{miformulario}}</p>
-    
+            {% if "valido" in request.GET %}
 
+                <p style="color:white;text-align: center;">Thank you for contacting us</p>
+
+            {% endif %}
+            {% if "novalido" in request.GET %}
+
+                <p style="color:rgb(231, 2, 2);text-align: center;">ERROR\\ The mail has not been sent //ERROR</p>
+
+            {% endif %}
+
+            <form action="" method="post" style="text-align: center;">
+                {% csrf_token %}
+                <table style="color: white;margin:20px auto;">
+                    {{miformulario.as_table}}
+                </table>
+                <input type="submit" value="Send" style="width: 10vw;">
+            </form>
+            
+
+        </div>
+        
+         
     {% endblock %}
     
-
+    
 </body>
+
 
 
 </html>
