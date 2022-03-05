@@ -1,0 +1,47 @@
+<html>
+
+<head>
+
+    <title>Shop</title>
+</head>
+
+<body>
+    {% extends "projecto_web_app/base.html" %}
+
+
+    {% load static %}
+    {% block content %}
+    <div class="container">
+        <div class="row">
+
+    {% for producto in productos %}
+            <div class="col">
+
+            <div class="card" style="width: 18vw;margin: 5px 5px;">
+                
+                <img src="{{producto.imagen.url}}" class="card-img-top" style="width: 15vw;height: 40vh;">
+            
+                <div class="card-body" style="text-align: center;display:block;margin:auto;">
+
+                    <h7 class="card-title">{{producto.nombre}}</h7>
+
+                    <p class="card-text">{{producto.precio}}&nbsp;Є</p>
+
+                </div>
+
+
+            </div> <!-- card que cierra-->
+            </div>
+
+
+    {% endfor %}
+        </div>
+    </div>
+
+    {% endblock %}
+    
+
+</body>
+
+
+</html>

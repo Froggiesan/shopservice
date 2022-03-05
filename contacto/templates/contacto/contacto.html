@@ -3,6 +3,11 @@
 <head>
     <title>Contact</title>
     <style>
+        .h1_c{
+            text-align: center;
+            color: white;
+            margin-bottom: 6vh;
+        }
         
 
         
@@ -17,7 +22,7 @@
     {% block content %}
 
         <div class="container-formulario">
-
+            <h1 class="h1_c">Contact Form</h1>
             {% if "valido" in request.GET %}
 
                 <p style="color:white;text-align: center;">Thank you for contacting us</p>
