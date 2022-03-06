@@ -12,23 +12,37 @@
     {% load static %}
     {% block content %}
     <div class="container">
+
+        <div class="" style="float: right;">
+            
+
+            {% include "carro/widget.html" %}
+
+        </div>
+
         <div class="row">
 
-    {% for producto in productos %}
-            <div class="col">
 
-            <div class="card" style="width: 18vw;margin: 5px 5px;">
+
+    {% for producto in productos %}
+            <div class="col-md-3" style="">
+            <!--Card of the items-->
+            <div class="card" style="width: 100%;margin: 5px 5px;">
                 
-                <img src="{{producto.imagen.url}}" class="card-img-top" style="width: 15vw;height: 40vh;">
+                <img src="{{producto.imagen.url}}" class="card-img-top" style="height: 25vh;">
             
-                <div class="card-body" style="text-align: center;display:block;margin:auto;">
+                <div class="card-body" style="text-align: center;">
 
                     <h7 class="card-title">{{producto.nombre}}</h7>
 
                     <p class="card-text">{{producto.precio}}&nbsp;Є</p>
 
-                </div>
 
+                </div>
+                <!-- Button footer-->
+                <div class="card-footer text-center" style="background-color: rgb(197, 195, 195);box-shadow: 4px black;">
+                    <a href="{% url 'carro:agregar' producto.id %}" class="btn btn-success">+</a>
+                </div>
 
             </div> <!-- card que cierra-->
             </div>
