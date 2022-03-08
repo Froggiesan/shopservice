@@ -17,10 +17,12 @@ class vRegistro(View):
 
     def post(self, request):
         form = UserCreationForm(request.POST)
+        
 
+        
         if form.is_valid():
             usuario = form.save()
-
+            
             login(request,usuario)
 
             return redirect('Home')

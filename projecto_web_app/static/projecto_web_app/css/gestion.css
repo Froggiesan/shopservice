@@ -287,10 +287,11 @@ ul.errorlist{
 .container-formulario{
   padding-top: 5vh;
   padding-bottom: 5vh;
-  background-color: rgb(24, 64, 8, 0.9);
+  
   border-radius: 5px;
   width: 35vw;
   margin: 5vh auto;
+  background-color: rgb(24, 64, 8, 0.9);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -298,5 +299,21 @@ ul.errorlist{
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
   
 
+  
+}
+.regilogin{
+  float: right;
+  text-align: center;
+  border: solid black 2px;
+  margin-right: 4vw;
+  top: auto;
+  height: 4vh;
+  background-color:rgb(24, 64, 8);
+  width: 10vw;
+  font-family: 'Raleway';
+  
+}
+.regilogin a{
+  
   
 }
