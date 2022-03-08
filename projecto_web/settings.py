@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'contacto',
     'tienda',
     'carro',
+    'autenticacion',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -148,4 +150,8 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'pruebasdjangopildoras@gmail.com'
 EMAIL_HOST_PASSWORD = '123123.as'
 
+
+# Crispy forms
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
